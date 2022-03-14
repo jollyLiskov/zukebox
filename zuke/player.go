@@ -173,6 +173,7 @@ func (ctx *PlayerContext) Next() {
 			log.Println("Could not play media from path", err)
 			return
 		}
+		time.Sleep(15 * time.Second)
 	} else {
 		if state == vlc.MediaPaused {
 			log.Println("Unpause")
